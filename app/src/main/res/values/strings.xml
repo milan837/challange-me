@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Challange Me</string>
+
+    <string name="app_name_text"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main"></string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen">Challange Me</string>
+    <string name="title_activity_notification"></string>
+    <string name="title_activity_my_profile">MyProfileActivity</string>
+    <string name="title_activity_face_challanges"></string>
+    <string name="title_activity_challange_pop_up">ChallangePopUpActivity</string>
+    <string name="title_activity_make_challange"></string>
+    <string name="title_activity_give_challange"></string>
+    <string name="title_activity_make_open_challange"></string>
+    <string name="title_activity_select_challange_category"></string>
+    <string name="title_activity_login">Challange Me</string>
+    <string name="title_activity_login_details"></string>
+    <string name="facebook_app_id">140548780003251</string>
+    <string name="title_activity_tags_selector">TagsSelectorActivity</string>
+    <string name="title_activity_result_sheet"></string>
+    <string name="title_activity_paytm"></string>
+</resources>

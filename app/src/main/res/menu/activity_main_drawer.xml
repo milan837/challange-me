@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/ic_profile_image"
+            android:title="My account" />
+        <item
+            android:id="@+id/nav_shop_coines"
+            android:icon="@mipmap/ic_coines"
+            android:title="Shop Coines" />
+        <item
+            android:id="@+id/nav_gift_cards"
+            android:icon="@mipmap/ic_gift_cards"
+            android:title="Gift Cards" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@mipmap/ic_feeedback"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/ic_logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

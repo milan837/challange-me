@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.me.challange.milan.challangeme.FaceChallangesActivity"
+    tools:showIn="@layout/activity_give_challange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:id="@+id/give_challange_toolbar_layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <!-- second row of view -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <!-- you or image -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:minWidth="70dp"
+                android:gravity="center">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/give_challanger_user_face_image"
+                    android:src="@drawable/profile_picture"
+                    app:civ_border_color="@color/blue"
+                    app:civ_border_width="3dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="#8BC34A"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+            </LinearLayout>
+
+            <!-- middle vs image -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/vs"
+                    android:src="@mipmap/ic_vs"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+            </LinearLayout>
+
+            <!-- oppoinene tuser details -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:minWidth="70dp"
+                android:gravity="center">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/give_user_changes_face_image"
+                    android:src="@drawable/profile_picture"
+                    app:civ_border_color="@color/brick"
+                    app:civ_border_width="3dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="#8BC34A"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--first loading layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/give_challange_toolbar_layout"
+        android:gravity="center">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:background="@drawable/round_relative_layout"
+            android:id="@+id/give_please_wait_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Please wait .."
+                android:id="@+id/give_please_wait_text" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/give_please_wait_progree_bar"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- below layout-->
+    <RelativeLayout
+        android:layout_below="@+id/give_challange_toolbar_layout"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:background="@drawable/round_relative_layout"
+        android:id="@+id/give_relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="5 pts"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/winner_background_textview"
+            android:id="@+id/give_challane_points_gain_question"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/winner_background_textview"
+            android:id="@+id/give_challane_timer_question"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/round_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="20/50"
+                android:padding="10dp"
+                android:textColor="#FFF"
+                android:id="@+id/give_challanges_total_asnwer_question"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/give_relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:id="@+id/give_question_answer_linear_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="What is the platfrom for web application development using java ?"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#000"
+            android:id="@+id/give_challanges_face_question_question" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:minHeight="80dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/round_relative_layout"
+                android:elevation="3dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="match_parent"
+                android:id="@+id/give_first_answer_layout" >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="J2EE  PlatForm"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:id="@+id/give_first_answer" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/round_relative_layout"
+                android:elevation="3dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:minHeight="80dp"
+                android:layout_margin="3dp"
+                android:layout_height="match_parent"
+                android:id="@+id/give_second_answer_layout" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="JSE PlatForm"
+                        android:textSize="16dp"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:id="@+id/give_second_answer" />
+                 </RelativeLayout>
+        </LinearLayout>
+
+        <!-- second answer div -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:minHeight="80dp"
+                android:gravity="center"
+                android:background="@drawable/round_relative_layout"
+                android:elevation="3dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_margin="3dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="match_parent"
+                android:id="@+id/give_third_answer_layout" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="JSE PlatForm"
+                        android:textSize="16dp"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:id="@+id/give_third_answer" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/round_relative_layout"
+                android:elevation="3dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:minHeight="80dp"
+                android:layout_margin="3dp"
+                android:layout_height="match_parent"
+                android:id="@+id/give_fourth_answer_layout">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="JSE PlatForm"
+                        android:textSize="16dp"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:id="@+id/give_fourth_answer" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:visibility="gone"
+        android:id="@+id/give_questionNumber"
+        android:layout_below="@+id/give_relativeLayout"
+        android:layout_alignLeft="@+id/give_relativeLayout"
+        android:layout_alignStart="@+id/give_relativeLayout" />
+
+</RelativeLayout>
